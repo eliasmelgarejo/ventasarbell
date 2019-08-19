@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1225ad38-aaef-40c2-a380-f38e9fe5df0c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/admin_shortcuts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin_shortcuts/templates/admin/base_site.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin_shortcuts/templates/admin_shortcuts/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin_shortcuts/templates/admin_shortcuts/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin_shortcuts/templates/admin_shortcuts/js.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin_shortcuts/templates/admin_shortcuts/shortcut.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin_shortcuts/templates/admin_shortcuts/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin_shortcuts/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin_shortcuts/templatetags/admin_shortcuts_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/constants.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock/autocomplete.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ventasarbell/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ventasarbell/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ventasarbell/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ventasarbell/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,11 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ventasarbell/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="329">
               <caret line="177" column="53" selection-start-line="177" selection-start-column="53" selection-end-line="177" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -89,6 +79,7 @@
         <option value="$PROJECT_DIR$/orders/models.py" />
         <option value="$PROJECT_DIR$/stock/views.py" />
         <option value="$PROJECT_DIR$/ventasarbell/settings.py" />
+        <option value="$PROJECT_DIR$/README.txt" />
       </list>
     </option>
   </component>
@@ -158,6 +149,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1552" height="840" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14389439" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -596,6 +588,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
           <caret line="177" column="53" selection-start-line="177" selection-start-column="53" selection-end-line="177" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
         </state>
       </provider>
     </entry>
