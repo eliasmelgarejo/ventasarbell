@@ -32,13 +32,23 @@ ALLOWED_HOSTS = ['127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'suit',
+    # 'suit',
+    'admin_shortcuts',
+    'smart_selects',
+    'dal',
+    'dal_select2',
+    # 'django_admin_bootstrapped',
+    'admin_view_permission',
     'django.contrib.admin',
+    # 'django_sb_admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap3',
+    # 'crispy_forms',
+    'stock',
 ]
 
 MIDDLEWARE = [
@@ -77,8 +87,14 @@ WSGI_APPLICATION = 'ventasarbell.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        #         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'arbelldb',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
@@ -121,3 +137,94 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+ADMIN_SHORTCUTS = [
+    {
+        'title': 'Seguridad',
+        'shortcuts': [
+            {
+                'url': '/',
+                'open_new_window': True,
+            },
+            {
+                'url_name': 'admin:logout',
+            },
+            {
+                'title': 'Users',
+                'url_name': 'admin:auth_user_changelist',
+                # 'count': 'ventasarbel.utils.count_users',
+            },
+            {
+                'title': 'Groups',
+                'url_name': 'admin:auth_group_changelist',
+                # 'count': 'ventasarbel.utils.count_groups',
+            },
+            {
+                'title': 'Add user',
+                'url_name': 'admin:auth_user_add',
+                # 'has_perms': 'ventasarbel.utils.has_perms_to_users',
+            },
+        ],
+    },
+    {
+        'title': 'Stock',
+        'shortcuts': [
+            {
+                'title': 'Lineas',
+                'url_name': 'admin:stock_linea_changelist',
+            },
+            {
+                'title': 'Productos',
+                'url_name': 'admin:stock_producto_add',
+            },
+            {
+                'title': 'Contact forms',
+                'icon': 'columns',
+                'url_name': 'admin:index',
+                'count_new': '3',
+            },
+            {
+                'title': 'Products',
+                'url_name': 'admin:index',
+            },
+            {
+                'title': 'Orders',
+                'url_name': 'admin:index',
+                'count_new': '12',
+            },
+        ]
+    },
+    {
+        'title': 'Pedidos',
+        'shortcuts': [
+            {
+                'title': 'Pages',
+                'url_name': 'admin:index',
+            },
+            {
+                'title': 'Files',
+                'url_name': 'admin:index',
+            },
+            {
+                'title': 'Contact forms',
+                'icon': 'columns',
+                'url_name': 'admin:index',
+                'count_new': '3',
+            },
+            {
+                'title': 'Products',
+                'url_name': 'admin:index',
+            },
+            {
+                'title': 'Orders',
+                'url_name': 'admin:index',
+                'count_new': '12',
+            },
+        ]
+    },
+]
+ADMIN_SHORTCUTS_SETTINGS = {
+    'show_on_all_pages': True,
+    'hide_app_list': True,
+    'open_new_window': False,
+}

@@ -11,7 +11,7 @@ class Linea(models.Model):
 
     class Meta:
         ordering = ["nombre"]
-        verbose_name_plural = "Lineaas"
+        verbose_name_plural = "Lineas"
 
     def __str__(self):
         return self.nombre
@@ -29,7 +29,7 @@ class Producto(models.Model):
         verbose_name_plural = "Productos"
 
     def __str__(self):
-        return self.nombre
+        return self.codigo + "-" + self.nombre
 
 
 class Deposito(models.Model):
@@ -38,7 +38,7 @@ class Deposito(models.Model):
 
     class Meta:
         ordering = ["nombre"]
-        verbose_name_plural = "Productos"
+        verbose_name_plural = "Depositos"
 
     def __str__(self):
         return self.nombre
@@ -47,10 +47,17 @@ class Deposito(models.Model):
 class ProductoDeposito(models.Model):
     producto = models.ForeignKey(Producto, verbose_name="Producto")
     deposito = models.ForeignKey(Deposito, verbose_name="Depósito")
-    stock = models.DecimalField(max_digits=2, decimal_places=0, default=0.0, verbose_name="Stock", null=True,
+    stock = models.DecimalField(max_digits=10, decimal_places=10, default=0.0, verbose_name="Stock", null=True,
                                 blank=True)
     unidadmedida = models.CharField(choices=UnidadMedida.LISTA_UNIDADES_MEDIDAS, default=UnidadMedida.UNIDAD,
                                     verbose_name="Unidad Medida", max_length=30)
+
+    class Meta:
+        ordering = ["deposito"]
+        verbose_name_plural = "Prod. x Depositos"
+
+    def __str__(self):
+        return self.producto + "-" + self.deposito
 
 
 class MovimientoProducto(models.Model):
@@ -60,4 +67,11 @@ class MovimientoProducto(models.Model):
                                       max_length=20)
     cantidad = models.DecimalField(max_digits=2, decimal_places=0, default=0.0, verbose_name="Stock")
     fecha = models.DateField(default=timezone.now, verbose_name="Fecha")
-    campaña = models.CharField(verbose_name="Campaña")
+    campaña = models.CharField(max_length=255, verbose_name="Campaña")
+
+    class Meta:
+        ordering = ["producto"]
+        verbose_name_plural = "Movimiento Prod."
+
+    def __str__(self):
+        return self.tipomovimiento + "#" + self.producto + ": " + str(self.cantidad)

@@ -18,3 +18,4 @@ class UnidadMedida:
         (UNIDAD, 'Unidad'),
         (LITRO, 'Litro'),
     )
+
