@@ -1,5 +1,5 @@
 arrow==0.10.0
-Django==1.10
+Django==2.2.24
 django-admin-bootstrapped==2.5.7
 django-admin-shortcuts==2.0.0
 django-admin-tools==0.8.0
